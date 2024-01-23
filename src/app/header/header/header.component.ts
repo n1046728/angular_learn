@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class HeaderComponent {
   isUpdate=false;;
   @Input() message ='';
+  @Output() update = new EventEmitter<string>();
   prefix='';
   fontSize=20;
 
@@ -16,5 +17,10 @@ export class HeaderComponent {
     this.isUpdate=true;
     this.fontSize++;
 
+  }
+
+  emitDataToParent(){
+    this.prefix='it come from child component';
+    this.update.emit(this.prefix);
   }
 }
