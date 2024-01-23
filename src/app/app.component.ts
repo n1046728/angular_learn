@@ -15,4 +15,9 @@ export class AppComponent {
     this.x = event.clientX;
     this.y = event.clientY;
   }
+
+  getDataFromInput(data:string){
+    console.log(data);
+    alert(data);
+  }
 }

@@ -12,6 +12,13 @@
   <!-- two way binding must import FormsModule -->
   <textarea [(ngModel)]="title" cols="10" rows="5"></textarea>
   <hr>
+  <h1>template variable</h1>
+  <!-- template variable can use # or ref-name -->
+  <input #mInput type="text">
+  <br><br>
+  <button type="button" (click)="getDataFromInput(mInput.value)">get template variable</button>
+  <hr>
+
 
 
 </div>
