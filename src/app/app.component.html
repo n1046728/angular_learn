@@ -21,6 +21,10 @@
   <h1>event filter use keyup.escape</h1>
   <textarea [(ngModel)]="textArea" cols="10" rows="5" (keyup.escape)="clearContent()"></textarea>
   <hr>
-
-
+</div>
+<div>
+  <h1>Header is here</h1>
+  <!-- add header component -->
+  <!-- see pass value to child -->
+  <app-header [message]="title" ></app-header>
 </div>

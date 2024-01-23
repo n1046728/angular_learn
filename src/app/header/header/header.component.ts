@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  isUpdate=false;;
+  @Input() message ='';
+  prefix='';
+  fontSize=20;
 
+  changePrefix(){
+    this.prefix ='Hello World!!!';
+    this.isUpdate=true;
+    this.fontSize++;
+
+  }
 }
