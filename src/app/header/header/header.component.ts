@@ -1,3 +1,4 @@
+import { ReturnStatement } from '@angular/compiler';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
@@ -11,6 +12,8 @@ export class HeaderComponent {
   @Output() update = new EventEmitter<string>();
   prefix='';
   fontSize=20;
+
+  fakeUsers:User[]=getFakeUserData();
 
   changePrefix(){
     this.prefix ='Hello World!!!';
@@ -27,4 +30,23 @@ export class HeaderComponent {
   updatePrefixFromExternal(data:string){
     this.prefix = data;
   }
+}
+
+interface User {
+  id:number;
+  name:string;
+  email:string;
+}
+
+function getFakeUserData():User[]{
+  const users:User[] = [];
+  for (let i = 0; i < 10; i++) {
+    const user :User = {
+      id : i,
+      name : `User ${i}`,
+      email : `abc${i}@gmail.com.tw`
+    };
+    users.push(user);
+  }
+  return users;
 }

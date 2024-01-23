@@ -6,3 +6,25 @@
 <h1>pass value to parent component</h1>
 <button type="button" (click)="emitDataToParent()">click to pass prefix value to parent</button>
 <hr>
+
+<h1>structure directive : *ngif </h1>
+<p *ngIf="isUpdate">When see this text ,it means the prefix has been changed</p>
+<button type="button" (click)="changePrefix()">click to change prefix</button>
+<hr>
+
+<h1>structure directive : *ngfor</h1>
+<table border="1">
+  <tr>
+    <th>#</th>
+    <th>id</th>
+    <th>name</th>
+    <th>email</th>
+  </tr>
+  <!-- type ngforinx choose ng-for-index -->
+  <tr *ngFor="let user of fakeUsers; let i=index">
+    <td>{{i}}</td>
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+  </tr>
+</table>
