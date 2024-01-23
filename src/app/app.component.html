@@ -1,6 +1,13 @@
-<!-- interpolation -->
-<h1>{{title}}</h1>
-<hr>
-<!-- property binding -->
-<code [title]="title">F12 to see this tag attribute </code>
-<hr>
+<!-- event binding -->
+<div (mousemove)="catchMouseMove($event)">
+  <!-- interpolation -->
+  <h1>{{title}}</h1>
+  <hr>
+  <!-- property binding -->
+  <code [title]="title">F12 to see this tag attribute </code>
+  <hr>
+  <h1>show mouse event result:</h1>
+    coordinate : <code>{{x}},{{y}}</code>
+  <hr>
+
+</div>

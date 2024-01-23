@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo';
+  x=0;
+  y=0;
+
+
+  catchMouseMove(event :MouseEvent){
+    this.x = event.clientX;
+    this.y = event.clientY;
+  }
 }
