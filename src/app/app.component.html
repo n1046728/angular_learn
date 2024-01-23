@@ -26,5 +26,10 @@
   <h1>Header is here</h1>
   <!-- add header component -->
   <!-- see pass value to child -->
-  <app-header [message]="title" (update)="title = $event"></app-header>
+  <app-header #mHeader [message]="title" (update)="title = $event"></app-header>
+  <hr>
+  <h1>show parent call child method</h1>
+  <button type="button" (click)="mHeader.updatePrefixFromExternal('Parent call child method');getDataFromInput('testtest')">
+  click to call child method
+  </button>
 </div>

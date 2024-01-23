@@ -1,8 +1,8 @@
 <h1>Attribute directive and Parent component passing value</h1>
 <p [class.highlight]='isUpdate' [style.font-size.px]="fontSize"> {{prefix}}+ Message From Parent:{{message}}</p>
 <button type="button" (click)="changePrefix()">click to change prefix and font size</button>
-
 <hr>
+
 <h1>pass value to parent component</h1>
 <button type="button" (click)="emitDataToParent()">click to pass prefix value to parent</button>
 <hr>

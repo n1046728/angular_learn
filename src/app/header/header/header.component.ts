@@ -23,4 +23,8 @@ export class HeaderComponent {
     this.prefix='it come from child component';
     this.update.emit(this.prefix);
   }
+
+  updatePrefixFromExternal(data:string){
+    this.prefix = data;
+  }
 }
