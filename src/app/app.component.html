@@ -18,7 +18,9 @@
   <br><br>
   <button type="button" (click)="getDataFromInput(mInput.value)">get template variable</button>
   <hr>
-
+  <h1>event filter use keyup.escape</h1>
+  <textarea [(ngModel)]="textArea" cols="10" rows="5" (keyup.escape)="clearContent()"></textarea>
+  <hr>
 
 
 </div>

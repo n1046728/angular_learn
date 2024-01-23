@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo';
+  textArea='';
   x=0;
   y=0;
 
@@ -19,5 +20,8 @@ export class AppComponent {
   getDataFromInput(data:string){
     console.log(data);
     alert(data);
+  }
+  clearContent(){
+    this.textArea ='';
   }
 }
