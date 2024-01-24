@@ -1,19 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header/header.component';
-import { TwdatePipe } from './twdate.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    TwdatePipe
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule //use ngModel must import
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
