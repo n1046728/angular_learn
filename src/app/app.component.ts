@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+  //add lifecycle event sequence
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.title = 'Lifecycle event sequence - OnInit';
+    }, 5000);
+  }
   title = 'demo';
   textArea='';
   x=0;
