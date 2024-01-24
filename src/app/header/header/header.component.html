@@ -44,7 +44,7 @@
     [ngClass]="{'highlight2':i%2===1 }"
   >
     <td>
-      <span ngSwitch="{{i}}">
+      <span ngSwitch='{{i}}'>
         <p *ngSwitchCase="0">zero</p>
         <p *ngSwitchCase="1">ID=1</p>
         <p *ngSwitchDefault>{{i}}/{{user.id}}/{{user.name}}/{{user.email}}</p>
@@ -55,3 +55,25 @@
   </tr>
 </table>
 <hr>
+
+<h1>pip</h1>
+<pre>{{fakeUsers | json}}</pre>
+<hr>
+
+<h1>custom pip ROC era</h1>
+<table border="1">
+  <tr>
+    <th>#</th>
+    <th>id</th>
+    <th>name</th>
+    <th>email</th>
+  </tr>
+  <tr *ngFor="let item of fakeUsers; let i=index">
+    <td>{{i}}/{{today | twdate}}</td>
+    <td>{{today | date:'yyyy-MM-dd'}}</td>
+    <td>{{811 | currency:'TWD':'symbol':'1.0-0' }}</td>
+    <td>{{0.123 | percent}}</td>
+  </tr>
+</table>
+
+

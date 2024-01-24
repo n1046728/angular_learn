@@ -12,6 +12,7 @@ export class HeaderComponent {
   @Output() update = new EventEmitter<string>();
   prefix='';
   fontSize=20;
+  today=new Date();
 
   fakeUsers:User[]=getFakeUserData();
 
